@@ -546,4 +546,19 @@
     {{--  --}}
 
     {{-- row --}}
+    <script>
+        // gigi dan mulut
+        document.querySelectorAll('select').forEach(select => {
+            select.addEventListener('change', function() {
+                // Reset semua kelas warna
+                this.className = 'form-control form-control-sm border-primary text-center px-0';
+
+                // Tambahkan kelas warna berdasarkan nilai
+                if (this.value === 'X') this.classList.add('text-danger');
+                if (this.value === 'O') this.classList.add('text-primary');
+                if (this.value === 'A') this.classList.add('text-success');
+                if (this.value === 'C') this.classList.add('text-warning');
+            });
+        });
+    </script>
 @endsection

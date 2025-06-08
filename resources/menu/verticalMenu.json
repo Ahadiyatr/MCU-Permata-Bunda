@@ -7,16 +7,27 @@
       "slug": "pages-home"
     },
     {
-      "url": "page-2",
+      "url": "pencarian",
+      "name": "Pencarian",
+      "icon": "menu-icon tf-icons ti ti-search",
+      "slug": "pencarian"
+    },
+    {
+      "url": "/kunjungan",
       "icon": "menu-icon tf-icons ti ti-file",
       "name": "Kunjungan",
-      "slug": "pages-page-2"
+      "slug": "kunjungan"
     },
     {
       "name": "Medical Record",
       "icon": "menu-icon tf-icons ti ti-text-wrap-disabled",
       "slug": "tables-datatables",
       "submenu": [
+        {
+          "url": "medical-records",
+          "name": "Medical Record",
+          "slug": "medical-records"
+        },
         {
           "url": "form-perawat",
           "name": "Perawat",
@@ -26,41 +37,42 @@
           "url": "form-dokter",
           "name": "Dokter",
           "slug": "form-dokter"
+        },
+        {
+          "url": "form-lab",
+          "name": "Laboratorium",
+          "slug": "form-lab"
         }
       ]
+    },
+    {
+      "name": "Master",
+      "icon": "menu-icon tf-icons ti ti-text-wrap-disabled",
+      "slug": "tables-datatables",
+      "submenu": [
+        {
+          "url": "perusahaan",
+          "name": "Perusahaan",
+          "slug": "form-perawat"
+        },
+        {
+          "url": "/user",
+          "name": "User",
+          "slug": "user"
+        }
+      ]
+    },
+    {
+      "url": "/",
+      "icon": "menu-icon tf-icons ti ti-file",
+      "name": "Laporan",
+      "slug": "laporan"
     },
     {
       "url": "page-2",
       "icon": "menu-icon tf-icons ti ti-file",
       "name": "Page 2",
       "slug": "pages-page-2"
-    },
-    {
-      "url": "form-karyawan",
-      "icon": "menu-icon tf-icons ti ti-file",
-      "name": "Form Pasien",
-      "slug": "form-karyawan"
-    },
-    {
-      "url": "pages/misc-error",
-      "name": "Error",
-      "icon": "menu-icon tf-icons ti ti-alert-triangle",
-      "slug": "pages-misc-error",
-      "target": "_blank"
-    },
-    {
-      "url": "auth/login-basic",
-      "name": "Login",
-      "icon": "menu-icon tf-icons ti ti-login",
-      "slug": "auth-login-basic",
-      "target": "_blank"
-    },
-    {
-      "url": "auth/register-basic",
-      "name": "Register",
-      "icon": "menu-icon tf-icons ti ti-user",
-      "slug": "auth-register-basic",
-      "target": "_blank"
     }
   ]
 }

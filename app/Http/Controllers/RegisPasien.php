@@ -7,6 +7,18 @@ use Illuminate\Http\Request;
 class RegisPasien extends Controller
 {
 
+    public function regispasien()
+  {
+    $pageConfigs = ['myLayout' => 'blank'];
+    return view('content.pasien.register-pasien', ['pageConfigs' => $pageConfigs]);
+  }
+
+    public function register1()
+  {
+    $pageConfigs = ['myLayout' => 'blank'];
+    return view('content.pasien.register-pasien-multistep', ['pageConfigs' => $pageConfigs]);
+  }
+
     public function index()
   {
     $pageConfigs = ['myLayout' => 'blank'];

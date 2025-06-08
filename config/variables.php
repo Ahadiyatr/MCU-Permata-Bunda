@@ -3,8 +3,8 @@
 return [
   "creatorName" => "Pixinvent",
   "creatorUrl" => "https://pixinvent.com",
-  "templateName" => "Apps",
-  "templateSuffix" => "MCU",
+  "templateName" => "MCU",
+  "templateSuffix" => "Permata Bunda",
   "templateVersion" => "2.0.0",
   "templateFree" => false,
   "templateDescription" => "Start your development with a Dashboard for Bootstrap 5",
