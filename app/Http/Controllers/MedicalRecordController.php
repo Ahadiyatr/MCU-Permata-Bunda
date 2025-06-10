@@ -18,6 +18,11 @@ class MedicalRecordController extends Controller
       return view('content.mcu.show-riwayat');
     }
 
+    public function showfisik ()
+    {
+      return view('content.mcu.show-fisik');
+    }
+
     public function create ()
     {
       return view('content.mcu.add-record');

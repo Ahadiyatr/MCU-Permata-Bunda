@@ -42,49 +42,49 @@
                 <ul class="nav nav-align-left nav-pills flex-column">
                     <li class="nav-item mb-1">
                         <a class="nav-link active" href="javascript:void(0);">
-                            <i class="ti ti-building-store ti-sm me-1_5"></i>
+                            <i class="ti ti-id ti-sm me-1_5"></i>
                             <span class="align-middle">Data Pribadi</span>
                         </a>
                     </li>
                     <li class="nav-item mb-1">
                         <a class="nav-link" href="{{ url('/medical-records/details-riwayat') }}">
-                            <i class="ti ti-credit-card ti-sm me-1_5"></i>
+                            <i class="ti ti-report-medical ti-sm me-1_5"></i>
                             <span class="align-middle">Riwayat</span>
                         </a>
                     </li>
                     <li class="nav-item mb-1">
-                        <a class="nav-link" href="{{ url('/app/ecommerce/settings/checkout') }}">
-                            <i class="ti ti-shopping-cart ti-sm me-1_5"></i>
+                        <a class="nav-link" href="{{ url('/medical-records/details-fisik') }}">
+                            <i class="ti ti-report-medical ti-sm me-1_5"></i>
                             <span class="align-middle">Pemeriksaan Fisik</span>
                         </a>
                     </li>
                     <li class="nav-item mb-1">
                         <a class="nav-link" href="{{ url('/app/ecommerce/settings/shipping') }}">
-                            <i class="ti ti-discount-2 ti-sm me-1_5"></i>
+                            <i class="ti ti-heart-rate-monitor ti-sm me-1_5"></i>
                             <span class="align-middle">Pemeriksaan Laboratorium</span>
                         </a>
                     </li>
                     <li class="nav-item mb-1">
                         <a class="nav-link" href="{{ url('/app/ecommerce/settings/locations') }}">
-                            <i class="ti ti-map-pin ti-sm me-1_5"></i>
+                            <i class="ti ti-heart-rate-monitor ti-sm me-1_5"></i>
                             <span class="align-middle">Pemeriksaan Radiologi</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/app/ecommerce/settings/notifications') }}">
-                            <i class="ti ti-bell-ringing ti-sm me-1_5"></i>
+                            <i class="ti ti-heart-rate-monitor ti-sm me-1_5"></i>
                             <span class="align-middle">Pemeriksaan Audiometri</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">
-                            <i class="ti ti-bell-ringing ti-sm me-1_5"></i>
+                            <i class="ti ti-heart-rate-monitor ti-sm me-1_5"></i>
                             <span class="align-middle">Pemeriksaan Spirometri</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">
-                            <i class="ti ti-bell-ringing ti-sm me-1_5"></i>
+                            <i class="ti ti-heart-rate-monitor ti-sm me-1_5"></i>
                             <span class="align-middle">Pemeriksaan EKG</span>
                         </a>
                     </li>

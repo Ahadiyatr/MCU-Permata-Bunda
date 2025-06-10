@@ -18,9 +18,25 @@
 @endsection
 
 @section('content')
+    <div class="row align-items-center">
+        <div class="col-auto">
+            <h5 class="content-header-title float-left pr-1 mb-0">Kunjungan</h5>
+        </div>
+        <div class="col">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="javascript:void(0);">Home</a></li>
+                    <li class="breadcrumb-item active">Kunjungan</li>
+                </ol>
+            </nav>
+        </div>
+        {{-- <div class="col-auto">
+        <button type="button" class="btn btn-primary">Primary</button>
+    </div> --}}
+    </div>
 
     <!-- DataTable with Buttons -->
-    <div class="card">
+    <div class="card mt-2">
         <div class="card-datatable table-responsive pt-0">
             <table class="table">
                 <thead>
@@ -46,9 +62,11 @@
                         </td>
                         <td>
                             <div class="dropdown">
-                                <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i
-                                        class="ti ti-dots-vertical"></i></button>
+                                <button type="button" class="btn p-0 dropdown-toggle hide-arrow"
+                                    data-bs-toggle="dropdown"><i class="ti ti-dots-vertical"></i></button>
                                 <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="javascript:void(0);"><i class="ti ti-pencil me-1"></i>
+                                        Terima Kunjungan</a>
                                     <a class="dropdown-item" href="javascript:void(0);"><i class="ti ti-pencil me-1"></i>
                                         Edit</a>
                                     <a class="dropdown-item" href="javascript:void(0);"><i class="ti ti-trash me-1"></i>
@@ -71,6 +89,8 @@
                                 <button type="button" class="btn p-0 dropdown-toggle hide-arrow"
                                     data-bs-toggle="dropdown"><i class="ti ti-dots-vertical"></i></button>
                                 <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="javascript:void(0);"><i class="ti ti-pencil me-1"></i>
+                                        Terima Kunjungan</a>
                                     <a class="dropdown-item" href="javascript:void(0);"><i class="ti ti-pencil me-1"></i>
                                         Edit</a>
                                     <a class="dropdown-item" href="javascript:void(0);"><i class="ti ti-trash me-1"></i>

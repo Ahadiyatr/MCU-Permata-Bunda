@@ -32,8 +32,10 @@ Route::get('/kunjungan', [KunjunganController::class, 'index'])->name('index');
 // Medical Records
 Route::get('/medical-records', [MedicalRecordController::class, 'index'])->name('index');
 Route::get('/medical-records/create-record', [MedicalRecordController::class, 'create'])->name('create-record');
+
 Route::get('/medical-records/details', [MedicalRecordController::class, 'show'])->name('show');
 Route::get('/medical-records/details-riwayat', [MedicalRecordController::class, 'showriwayat'])->name('showriwayat');
+Route::get('/medical-records/details-fisik', [MedicalRecordController::class, 'showfisik'])->name('showfisik');
 Route::get('/medical-records/details-mcu', [MedicalRecordController::class, 'details'])->name('details');
 
 // Pasien

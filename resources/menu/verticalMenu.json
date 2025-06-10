@@ -7,16 +7,16 @@
       "slug": "pages-home"
     },
     {
-      "url": "pencarian",
-      "name": "Pencarian",
-      "icon": "menu-icon tf-icons ti ti-search",
-      "slug": "pencarian"
-    },
-    {
       "url": "/kunjungan",
       "icon": "menu-icon tf-icons ti ti-file",
       "name": "Kunjungan",
       "slug": "kunjungan"
+    },
+    {
+      "url": "data-pasien",
+      "icon": "menu-icon tf-icons ti ti-wheelchair",
+      "name": "Data Pasien",
+      "slug": "data-pasien"
     },
     {
       "name": "Medical Record",
