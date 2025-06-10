@@ -1,20 +1,21 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\language\LanguageController;
-use App\Http\Controllers\pages\HomePage;
 use App\Http\Controllers\pages\Page2;
-use App\Http\Controllers\pages\MiscError;
-use App\Http\Controllers\authentications\LoginBasic;
-use App\Http\Controllers\authentications\RegisterBasic;
-use App\Http\Controllers\DokterController;
-use App\Http\Controllers\KunjunganController;
+use App\Http\Controllers\RegisPasien;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LabController;
+use App\Http\Controllers\pages\HomePage;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\pages\MiscError;
+use App\Http\Controllers\DokterController;
+use App\Http\Controllers\LaporanController;
+use App\Http\Controllers\KunjunganController;
+use App\Http\Controllers\PerusahaanController;
 use App\Http\Controllers\MedicalRecordController;
 use App\Http\Controllers\perawat\PerawatController;
-use App\Http\Controllers\PerusahaanController;
-use App\Http\Controllers\RegisPasien;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\authentications\LoginBasic;
+use App\Http\Controllers\language\LanguageController;
+use App\Http\Controllers\authentications\RegisterBasic;
 
 // Main Page Route
 Route::get('/', [HomePage::class, 'index'])->name('pages-home');
@@ -56,6 +57,9 @@ Route::get('/form-perawat', [PerawatController::class, 'form'])->name('isian-per
 Route::get('/perusahaan', [PerusahaanController::class, 'index'])->name('perusahaan');
 // User
 Route::get('/user', [UserController::class, 'index'])->name('user');
+
+// Laporan
+Route::get('/laporan', [LaporanController::class, 'index'])->name('index');
 
 
 

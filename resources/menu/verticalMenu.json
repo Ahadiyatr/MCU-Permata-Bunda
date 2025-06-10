@@ -8,19 +8,19 @@
     },
     {
       "url": "/kunjungan",
-      "icon": "menu-icon tf-icons ti ti-file",
+      "icon": "menu-icon tf-icons ti ti-wheelchair",
       "name": "Kunjungan",
       "slug": "kunjungan"
     },
     {
       "url": "data-pasien",
-      "icon": "menu-icon tf-icons ti ti-wheelchair",
+      "icon": "menu-icon tf-icons ti ti-stethoscope",
       "name": "Data Pasien",
       "slug": "data-pasien"
     },
     {
       "name": "Medical Record",
-      "icon": "menu-icon tf-icons ti ti-text-wrap-disabled",
+      "icon": "menu-icon tf-icons ti ti-timeline-event-plus",
       "slug": "tables-datatables",
       "submenu": [
         {
@@ -47,7 +47,7 @@
     },
     {
       "name": "Master",
-      "icon": "menu-icon tf-icons ti ti-text-wrap-disabled",
+      "icon": "menu-icon tf-icons ti ti-layout-navbar-expand",
       "slug": "tables-datatables",
       "submenu": [
         {
@@ -63,16 +63,10 @@
       ]
     },
     {
-      "url": "/",
-      "icon": "menu-icon tf-icons ti ti-file",
+      "url": "/laporan",
+      "icon": "menu-icon tf-icons ti ti-report",
       "name": "Laporan",
       "slug": "laporan"
-    },
-    {
-      "url": "page-2",
-      "icon": "menu-icon tf-icons ti ti-file",
-      "name": "Page 2",
-      "slug": "pages-page-2"
     }
   ]
 }
