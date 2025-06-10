@@ -94,31 +94,11 @@
                         <p class="text-center">
                             <span>Pasien Lama</span>
                             <a href="{{ url('auth/login-basic') }}">
-                                <span>Sign in instead</span>
+                                <span>verifikasi data</span>
                             </a>
                         </p>
 
-                        <div class="divider my-6">
-                            <div class="divider-text">or</div>
-                        </div>
 
-                        <div class="d-flex justify-content-center">
-                            <a href="javascript:;" class="btn btn-sm btn-icon rounded-pill btn-text-facebook me-1_5">
-                                <i class="tf-icons ti ti-brand-facebook-filled"></i>
-                            </a>
-
-                            <a href="javascript:;" class="btn btn-sm btn-icon rounded-pill btn-text-twitter me-1_5">
-                                <i class="tf-icons ti ti-brand-twitter-filled"></i>
-                            </a>
-
-                            <a href="javascript:;" class="btn btn-sm btn-icon rounded-pill btn-text-github me-1_5">
-                                <i class="tf-icons ti ti-brand-github-filled"></i>
-                            </a>
-
-                            <a href="javascript:;" class="btn btn-sm btn-icon rounded-pill btn-text-google-plus">
-                                <i class="tf-icons ti ti-brand-google-filled"></i>
-                            </a>
-                        </div>
                     </div>
                 </div>
                 <!-- Register Card -->

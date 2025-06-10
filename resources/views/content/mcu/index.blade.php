@@ -3,24 +3,23 @@
 @section('title', 'DataTables - Tables')
 
 @section('content')
-    <div class="container mt-2">
-        <div class="row align-items-center">
-            <div class="col-auto">
-                <h5 class="mb-0">Medical Record</h5>
-            </div>
-            <div class="col">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb mb-0">
-                        <li class="breadcrumb-item"><a href="javascript:void(0);">Home</a></li>
-                        <li class="breadcrumb-item active">Medical Record</li>
-                    </ol>
-                </nav>
-            </div>
-            {{-- <div class="col-auto">
-                <button type="button" class="btn btn-primary">Primary</button>
-            </div> --}}
+    <div class="row align-items-center">
+        <div class="col-auto">
+            <h5 class="content-header-title float-left pr-1 mb-0">Medical Record</h5>
         </div>
+        <div class="col">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="javascript:void(0);">Home</a></li>
+                    <li class="breadcrumb-item active">Medical Record</li>
+                </ol>
+            </nav>
+        </div>
+        {{-- <div class="col-auto">
+        <button type="button" class="btn btn-primary">Primary</button>
+    </div> --}}
     </div>
+
     <!-- Striped Rows -->
     <div class="card mb-6 mt-3">
         <div class="table-responsive text-nowrap">

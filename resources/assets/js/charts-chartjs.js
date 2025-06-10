@@ -789,6 +789,60 @@
     });
   }
 
+  // Status Chart
+  const statusChart = document.getElementById('statusChart');
+  if (statusChart) {
+    const statusChartVar = new Chart(statusChart, {
+      type: 'doughnut',
+      data: {
+        labels: ['Fit', 'Fit with Note', 'Fit with Follow Up', 'Temporary Unfit', 'Unfit'],
+        datasets: [
+          {
+            data: [45, 20, 15, 12, 8],
+            backgroundColor: [
+              'rgb(40, 199, 111)', // Hijau untuk Fit
+              'rgb(0, 207, 232)', // Biru untuk Fit with Note
+              'rgb(255, 159, 67)', // Orange untuk Fit with Follow Up
+              'rgb(130, 134, 139)', // Abu-abu untuk Temporary Unfit
+              'rgb(234, 84, 85)' // Merah untuk Unfit
+            ],
+            borderWidth: 0,
+            pointStyle: 'rectRounded'
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        animation: {
+          duration: 500
+        },
+        cutout: '68%',
+        plugins: {
+          legend: {
+            display: false
+          },
+          tooltip: {
+            callbacks: {
+              label: function (context) {
+                const label = context.label || '';
+                const value = context.parsed;
+                const output = ' ' + label + ' : ' + value + '%';
+                return output;
+              }
+            },
+            // Updated default tooltip UI
+            rtl: isRtl,
+            backgroundColor: cardColor,
+            titleColor: headingColor,
+            bodyColor: legendColor,
+            borderWidth: 1,
+            borderColor: borderColor
+          }
+        }
+      }
+    });
+  }
+
   // Doughnut Chart
   // --------------------------------------------------------------------
 

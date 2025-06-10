@@ -12,6 +12,12 @@ class HomePage extends Controller
     return view('content.pages.pages-home');
   }
 
+  public function homePt()
+  {
+    return view('content.pages.pages-home-pt');
+
+  }
+
   public function pencarian()
   {
     return view('content.pencarian.index');

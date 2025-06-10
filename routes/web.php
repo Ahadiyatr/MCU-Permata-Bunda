@@ -18,6 +18,8 @@ use App\Http\Controllers\UserController;
 
 // Main Page Route
 Route::get('/', [HomePage::class, 'index'])->name('pages-home');
+Route::get('/perusahaan-home', [HomePage::class, 'homePt'])->name('perusahan-home');
+
 Route::get('/page-2', [Page2::class, 'index'])->name('pages-page-2');
 
 // Pencarian

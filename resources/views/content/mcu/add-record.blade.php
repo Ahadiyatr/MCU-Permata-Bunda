@@ -18,22 +18,21 @@
 @endsection
 
 @section('content')
-    <div class="container mt-2">
-        <div class="row align-items-center">
-            <div class="col-auto">
-                <h5 class="mb-0">Medical Record</h5>
-            </div>
-            <div class="col">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb mb-0">
-                        <li class="breadcrumb-item"><a href="javascript:void(0);">Home</a></li>
-                        <li class="breadcrumb-item"><a href="javascript:void(0);">Medical Record</a></li>
-                        <li class="breadcrumb-item active">Form Add Record</li>
-                    </ol>
-                </nav>
-            </div>
+    <div class="row align-items-center">
+        <div class="col-auto">
+            <h4 class="content-header-title float-left pr-1 mb-0">Add Record</h4>
+        </div>
+        <div class="col">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="javascript:void(0);">Home</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0);">Medical Record</a></li>
+                    <li class="breadcrumb-item active">Form Add Record</li>
+                </ol>
+            </nav>
         </div>
     </div>
+
     <!-- Default -->
     <div class="row">
 
@@ -102,7 +101,7 @@
                     <div class="line">
                         <i class="ti ti-chevron-right"></i>
                     </div>
-                    <div class="step" data-target="#form-lab">
+                    <div class="step" data-target="#form-spirometry">
                         <button type="button" class="step-trigger">
                             <span class="bs-stepper-circle">6</span>
                             <span class="bs-stepper-label">
@@ -114,7 +113,7 @@
                     <div class="line">
                         <i class="ti ti-chevron-right"></i>
                     </div>
-                    <div class="step" data-target="#form-lab">
+                    <div class="step" data-target="#form-ekg">
                         <button type="button" class="step-trigger">
                             <span class="bs-stepper-circle">7</span>
                             <span class="bs-stepper-label">
@@ -1320,23 +1319,24 @@
                             <div class="row g-6">
                                 <div class="col-md-6 mb-4">
                                     <label class="form-label">Hasil Radiologi</label>
-                                    <div class="dropzone needsclick" id="dropzone-lab">
+                                    <div class="dropzone needsclick" id="dropzone-thorax">
                                         <div class="dz-message needsclick">
                                             <h5>Drop file here atau klik untuk upload</h5>
                                             <span class="note needsclick">(Format: PDF/JPG/PNG, Maks: 5MB)</span>
                                         </div>
                                         <div class="fallback">
-                                            <input name="lab_file" type="file" accept=".pdf,.jpg,.jpeg,.png" />
+                                            <input name="thorax_file" type="file" accept=".pdf,.jpg,.jpeg,.png" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-4">
-                                    <label class="form-label">Saran</label>
-                                    <div id="editor-saran">
-                                        <h6>Quill Rich Text Editor</h6>
-                                        <p> Cupcake ipsum dolor sit amet. Halvah cheesecake chocolate bar gummi bears
-                                            cupcake. Pie macaroon bear claw. Soufflé I love candy canes I love cotton candy
-                                            I love. </p>
+                                    <div class="editor-container">
+                                        <label class="form-label">Saran Radiologi</label>
+                                        <div class="editor-label">Quill Rich Text Editor - Radiologi</div>
+                                        <div id="saran-radiologi" class="quill-editor">
+                                            <p>Hasil pemeriksaan radiologi menunjukkan kondisi normal. Tidak ditemukan
+                                                kelainan struktural yang signifikan pada area yang diperiksa.</p>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
@@ -1373,12 +1373,13 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-4">
-                                    <label class="form-label">Saran</label>
-                                    <div id="editor-keterangan">
-                                        <h6>Quill Rich Text Editor</h6>
-                                        <p> Cupcake ipsum dolor sit amet. Halvah cheesecake chocolate bar gummi bears
-                                            cupcake. Pie macaroon bear claw. Soufflé I love candy canes I love cotton candy
-                                            I love. </p>
+                                    <div class="editor-container">
+                                        <label class="form-label">Saran Laboratorium</label>
+                                        <div class="editor-label">Quill Rich Text Editor - Lab</div>
+                                        <div id="saran-lab" class="quill-editor">
+                                            <p>Hasil pemeriksaan laboratorium dalam batas normal. Disarankan untuk melakukan
+                                                kontrol rutin sesuai jadwal yang telah ditentukan.</p>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -1400,11 +1401,56 @@
                                 </div>
                             </div>
                         </div>
-                        {{-- 5. Laboratorium --}}
+                        {{-- 5. Audiometry --}}
                         <div id="form-audiometri" class="content">
                             <div class="row g-6">
-                                <div class="col-md-12 mb-4">
+                                <div class="col-md-6 mb-4">
                                     <label class="form-label">Hasil Audiometri</label>
+                                    <div class="dropzone needsclick" id="dropzone-audiometri">
+                                        <div class="dz-message needsclick">
+                                            <h5>Drop file here atau klik untuk upload</h5>
+                                            <span class="note needsclick">(Format: PDF/JPG/PNG, Maks: 5MB)</span>
+                                        </div>
+                                        <div class="fallback">
+                                            <input name="audiometri_file" type="file"
+                                                accept=".pdf,.jpg,.jpeg,.png" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="editor-container">
+                                        <label class="form-label">Saran Audiometry</label>
+                                        <div class="editor-label">Quill Rich Text Editor - Audiometry</div>
+                                        <div id="saran-audiometry" class="quill-editor">
+                                            <p>Fungsi pendengaran dalam kondisi baik. Tidak ditemukan gangguan pendengaran
+                                                yang memerlukan tindakan khusus.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <label for="bloodPressure1" class="form-label">Kesimpulan</label>
+                                    <input type="text" class="form-control" id="bloodPressure1"
+                                        placeholder="Contoh: Normal" aria-describedby="bloodPressureHelp" />
+                                </div>
+
+                                <div class="col-12 d-flex justify-content-between">
+                                    <button class="btn btn-label-secondary btn-prev"> <i
+                                            class="ti ti-arrow-left ti-xs me-sm-2 me-0"></i>
+                                        <span class="align-middle d-sm-inline-block d-none">Previous</span>
+                                    </button>
+                                    <button class="btn btn-primary btn-next"> <span
+                                            class="align-middle d-sm-inline-block d-none me-sm-2">Next</span> <i
+                                            class="ti ti-arrow-right ti-xs"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        {{-- 6. Spirometry --}}
+                        <div id="form-spirometry" class="content">
+                            <div class="row g-6">
+                                <div class="col-md-6 mb-4">
+                                    <label class="form-label">Hasil Spirometri</label>
                                     <div class="dropzone needsclick" id="dropzone-lab">
                                         <div class="dz-message needsclick">
                                             <h5>Drop file here atau klik untuk upload</h5>
@@ -1412,6 +1458,60 @@
                                         </div>
                                         <div class="fallback">
                                             <input name="lab_file" type="file" accept=".pdf,.jpg,.jpeg,.png" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="editor-container">
+                                        <label class="form-label">Saran Audiometry</label>
+                                        <div class="editor-label">Quill Rich Text Editor - Audiometry</div>
+                                        <div id="saran-spirometry" class="quill-editor">
+                                            <p>Fungsi pendengaran dalam kondisi baik. Tidak ditemukan gangguan pendengaran
+                                                yang memerlukan tindakan khusus.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <label for="bloodPressure1" class="form-label">Kesimpulan</label>
+                                    <input type="text" class="form-control" id="bloodPressure1"
+                                        placeholder="Contoh: Normal" aria-describedby="bloodPressureHelp" />
+                                </div>
+
+                                <div class="col-12 d-flex justify-content-between">
+                                    <button class="btn btn-label-secondary btn-prev"> <i
+                                            class="ti ti-arrow-left ti-xs me-sm-2 me-0"></i>
+                                        <span class="align-middle d-sm-inline-block d-none">Previous</span>
+                                    </button>
+                                    <button class="btn btn-primary btn-next"> <span
+                                            class="align-middle d-sm-inline-block d-none me-sm-2">Next</span> <i
+                                            class="ti ti-arrow-right ti-xs"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        {{-- 6. EKG --}}
+                        <div id="form-ekg" class="content">
+                            <div class="row g-6">
+                                <div class="col-md-6 mb-4">
+                                    <label class="form-label">Hasil EKG</label>
+                                    <div class="dropzone needsclick" id="dropzone-ekg">
+                                        <div class="dz-message needsclick">
+                                            <h5>Drop file here atau klik untuk upload</h5>
+                                            <span class="note needsclick">(Format: PDF/JPG/PNG, Maks: 5MB)</span>
+                                        </div>
+                                        <div class="fallback">
+                                            <input name="ekg_file" type="file" accept=".pdf,.jpg,.jpeg,.png" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="editor-container">
+                                        <label class="form-label">Saran EKG</label>
+                                        <div class="editor-label">Quill Rich Text Editor - Audiometry</div>
+                                        <div id="saran-ekg" class="quill-editor">
+                                            <p>Fungsi pendengaran dalam kondisi baik. Tidak ditemukan gangguan pendengaran
+                                                yang memerlukan tindakan khusus.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -1477,84 +1577,231 @@
                 });
             });
 
-            // Pastikan Quill sudah di-load
+            // Editor Script
+
+            class MultipleQuillManager {
+                constructor() {
+                    this.editors = {};
+                    this.toolbarOptions = [
+                        ['bold', 'italic', 'underline', 'strike'],
+                        ['blockquote', 'code-block'],
+                        [{
+                            'header': 1
+                        }, {
+                            'header': 2
+                        }],
+                        [{
+                            'list': 'ordered'
+                        }, {
+                            'list': 'bullet'
+                        }],
+                        [{
+                            'script': 'sub'
+                        }, {
+                            'script': 'super'
+                        }],
+                        [{
+                            'indent': '-1'
+                        }, {
+                            'indent': '+1'
+                        }],
+                        [{
+                            'size': ['small', false, 'large', 'huge']
+                        }],
+                        [{
+                            'color': []
+                        }, {
+                            'background': []
+                        }],
+                        [{
+                            'align': []
+                        }],
+                        ['clean']
+                    ];
+                    this.init();
+                }
+
+                init() {
+                    // Cari semua element dengan class 'quill-editor'
+                    const editorElements = document.querySelectorAll('.quill-editor');
+
+                    editorElements.forEach((element) => {
+                        const editorId = element.id;
+                        if (editorId && !this.editors[editorId]) {
+                            try {
+                                this.editors[editorId] = new Quill(`#${editorId}`, {
+                                    modules: {
+                                        toolbar: this.toolbarOptions
+                                    },
+                                    theme: 'snow',
+                                    placeholder: `Masukkan ${editorId.replace('-', ' ')}...`
+                                });
+
+                                console.log(`✅ Editor ${editorId} berhasil diinisialisasi`);
+                            } catch (error) {
+                                console.error(`❌ Error inisialisasi editor ${editorId}:`, error);
+                            }
+                        }
+                    });
+
+                    console.log(`🎉 Total ${Object.keys(this.editors).length} editor berhasil diinisialisasi`);
+                }
+
+                getEditor(id) {
+                    return this.editors[id] || null;
+                }
+
+                getAllContent() {
+                    const content = {};
+                    Object.keys(this.editors).forEach(editorId => {
+                        if (this.editors[editorId]) {
+                            content[editorId] = {
+                                html: this.editors[editorId].root.innerHTML,
+                                text: this.editors[editorId].getText().trim(),
+                                delta: this.editors[editorId].getContents()
+                            };
+                        }
+                    });
+                    return content;
+                }
+
+                setContent(id, content) {
+                    if (this.editors[id]) {
+                        if (typeof content === 'string') {
+                            this.editors[id].root.innerHTML = content;
+                        } else {
+                            this.editors[id].setContents(content);
+                        }
+                    }
+                }
+
+                clearEditor(id) {
+                    if (this.editors[id]) {
+                        this.editors[id].setText('');
+                    }
+                }
+
+                clearAllEditors() {
+                    Object.keys(this.editors).forEach(id => {
+                        this.clearEditor(id);
+                    });
+                }
+
+                validateContent() {
+                    const emptyEditors = [];
+                    Object.keys(this.editors).forEach(id => {
+                        if (this.editors[id] && this.editors[id].getText().trim() === '') {
+                            emptyEditors.push(id);
+                        }
+                    });
+                    return emptyEditors;
+                }
+            }
+
+            // Inisialisasi manager ketika DOM sudah ready
+            let quillManager;
+
             document.addEventListener('DOMContentLoaded', function() {
-                // Konfigurasi toolbar
-                const toolbarOptions = [
-                    ['bold', 'italic', 'underline', 'strike'],
-                    ['blockquote', 'code-block'],
-                    [{
-                        'header': 1
-                    }, {
-                        'header': 2
-                    }],
-                    [{
-                        'list': 'ordered'
-                    }, {
-                        'list': 'bullet'
-                    }],
-                    [{
-                        'script': 'sub'
-                    }, {
-                        'script': 'super'
-                    }],
-                    [{
-                        'indent': '-1'
-                    }, {
-                        'indent': '+1'
-                    }],
-                    [{
-                        'direction': 'rtl'
-                    }],
-                    [{
-                        'size': ['small', false, 'large', 'huge']
-                    }],
-                    [{
-                        'header': [1, 2, 3, 4, 5, 6, false]
-                    }],
-                    [{
-                        'color': []
-                    }, {
-                        'background': []
-                    }],
-                    [{
-                        'font': []
-                    }],
-                    [{
-                        'align': []
-                    }],
-                    ['clean']
-                ];
+                // Delay sedikit untuk memastikan semua element sudah ter-render
+                setTimeout(() => {
+                    quillManager = new MultipleQuillManager();
 
-                // Inisialisasi editor pertama
-                let editorSaran = null;
-                const editorSaranElement = document.querySelector('#editor-saran');
-                if (editorSaranElement) {
-                    editorSaran = new Quill('#editor-saran', {
-                        modules: {
-                            toolbar: toolbarOptions
-                        },
-                        theme: 'snow'
-                    });
-                }
-
-                // Inisialisasi editor kedua
-                let editorKeterangan = null;
-                const editorKeteranganElement = document.querySelector('#editor-keterangan');
-                if (editorKeteranganElement) {
-                    editorKeterangan = new Quill('#editor-keterangan', {
-                        modules: {
-                            toolbar: toolbarOptions
-                        },
-                        theme: 'snow'
-                    });
-                }
-
-                // Simpan referensi editor dalam objek global jika diperlukan
-                window.quillEditors = {
-                    saran: editorSaran,
-                    keterangan: editorKeterangan
-                };
+                    // Set ke global scope untuk akses dari console
+                    window.quillManager = quillManager;
+                }, 100);
             });
+
+            // Fungsi untuk clear semua editor
+            function clearAllEditors() {
+                if (quillManager) {
+                    quillManager.clearAllEditors();
+                    document.getElementById('contentPreview').style.display = 'none';
+                    console.log('🧹 Semua editor telah dibersihkan');
+                }
+            }
+
+            // Fungsi untuk menampilkan semua content
+            function showAllContent() {
+                if (quillManager) {
+                    const allContent = quillManager.getAllContent();
+                    let previewHtml = '';
+
+                    Object.keys(allContent).forEach(editorId => {
+                        const content = allContent[editorId];
+                        previewHtml += `
+                        <div class="mb-3">
+                            <strong>${editorId.replace('-', ' ').toUpperCase()}:</strong>
+                            <div class="border p-2 mt-1 rounded">
+                                ${content.html || '<em>Kosong</em>'}
+                            </div>
+                        </div>
+                    `;
+                    });
+
+                    document.getElementById('previewText').innerHTML = previewHtml;
+                    document.getElementById('contentPreview').style.display = 'block';
+
+                    console.log('📋 Content semua editor:', allContent);
+                }
+            }
+
+            // Handle form submission
+            document.getElementById('multipleEditorsForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                if (!quillManager) {
+                    alert('❌ Editor belum siap!');
+                    return;
+                }
+
+                // Validasi content
+                const emptyEditors = quillManager.validateContent();
+                if (emptyEditors.length > 0) {
+                    alert(`⚠️ Editor berikut masih kosong: ${emptyEditors.join(', ')}`);
+                    return;
+                }
+
+                // Ambil semua content
+                const formData = quillManager.getAllContent();
+
+                // Simulasi pengiriman data
+                console.log('📤 Data yang akan dikirim:', formData);
+
+                // Tampilkan alert sukses
+                alert('✅ Data berhasil disimpan!\nCek console untuk melihat data.');
+
+                // Optional: Kirim ke server
+                // submitToServer(formData);
+            });
+
+            // Fungsi untuk mengirim data ke server (contoh)
+            function submitToServer(data) {
+                // Contoh implementasi AJAX
+                /*
+                fetch('/api/save-editor-content', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+                    },
+                    body: JSON.stringify(data)
+                })
+                .then(response => response.json())
+                .then(result => {
+                    console.log('✅ Data berhasil disimpan ke server:', result);
+                })
+                .catch(error => {
+                    console.error('❌ Error:', error);
+                });
+                */
+            }
+
+            // Fungsi utility untuk debugging
+            window.debugQuill = function() {
+                console.log('🔍 Debug Info:');
+                console.log('- Quill Manager:', quillManager);
+                console.log('- Available Editors:', quillManager ? Object.keys(quillManager.editors) : 'Not initialized');
+                console.log('- All Content:', quillManager ? quillManager.getAllContent() : 'Not available');
+            };
         </script>
     @endsection

@@ -1,25 +1,26 @@
 # 🩺 Medical Check-Up System — Progress Log
 
-Catatan perkembangan sistem analisis hasil Medical Check-Up karyawan menggunakan Laravel + Template Vuexy.
+Catatan perkembangan Aplikasi Medical Check-Up Klinik Permata Bunda
 
 ---
 
 ## ✅ To Do List
 
-| No  | Fitur                                             | Status      | Keterangan                                                                     |
-| --- | ------------------------------------------------- | ----------- | ------------------------------------------------------------------------------ |
-| 1.  | Hasil Barcode Detail MCU Karyawan (View)          | Progress,   | view masih belum di sesuaikan dengan point-point yang ada.                     |
-| 2.  | Tampilan Perusahaan                               | ---- x ---- |                                                                                |
-| 3.  | Unduh Hasil MCU (Perusahaan)                      | ---- x ---- | Fitur untuk mengunduh hasil MCU seluruh karyawan dalam satu file.              |
-| 4.  | Upload Logo Klinik, Sidebar Logo, Nama & Favicons | ✅ Selesai  | Logo klinik tampil di header, sidebar (text png), dan favicon browser.         |
-| 5.  | Riwayat Pengisian Pasien                          | On Progress | Menampilkan riwayat pengisian form MCU oleh pasien maupun petugas medis.       |
-| 6.  | Laporan MCU.                                      | ---- x ---- | Menampilkan laporan hasil mcu berdasarkan kesimpulan, perusahaan(user klinik). |
+| No  | Fitur                                             | Status       | Keterangan                                                                     |
+| --- | ------------------------------------------------- | ------------ | ------------------------------------------------------------------------------ |
+| 1.  | Hasil Barcode Detail MCU Karyawan (View)          | --- WIP ---  | view masih belum di sesuaikan dengan point-point yang ada.                     |
+| 2.  | Tampilan Perusahaan                               | --- WIP ---  | Dashboard perusahaan✅                                                         |
+| 3.  | Unduh Hasil MCU (Perusahaan)                      | ---- ❌ ---- | Fitur untuk mengunduh hasil MCU seluruh karyawan dalam satu file.              |
+| 4.  | Upload Logo Klinik, Sidebar Logo, Nama & Favicons | ✅ Selesai   | Logo klinik tampil di header, sidebar (text png), dan favicon browser.         |
+| 5.  | Riwayat Pengisian Pasien                          | --- WIP ---  | Menampilkan riwayat pengisian form MCU oleh pasien maupun petugas medis.       |
+| 6.  | Laporan MCU.                                      | ---- ❌ ---  | Menampilkan laporan hasil mcu berdasarkan kesimpulan, perusahaan(user klinik). |
 
 ---
 
 ## Route
 
 - Hasil Barcode Detail MCI Karyawan (View) : '/medical-records/details-mcu'
+- Dashboard Perusahaan : '/perusahaan-home'
 
 ## 🛠️ Teknologi
 
